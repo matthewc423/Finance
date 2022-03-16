@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %} 
+
+{% block main %}
+    <div class="mb-3">
+        <ul class="list-group">
+            <li class="list-group-item">{{ stock.name }}</li>
+            <li class="list-group-item">{{ price }}</li>
+            <li class="list-group-item">{{ stock.symbol }}</li>
+        </ul>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %} 
+
+{% block main %}
+    <div class="mb-3">
+        <h2>Stocks</h2>
+        <hr>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr class="table-primary">
+                    <th scope="col">Stock</th>
+                    <th scope="col">Shares</th>
+                    <th scope="col">Current Price</th>
+                    <th scope="col">Total Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for i in range(tlength) %}
+                    <tr>
+                        <th scope="row">{{ transactions[i].symbol }}</td>
+                        <td>{{ transactions[i].shares }}</td>
+                        <td>{{ stockprices[i] }}</td>
+                        <td>{{ totalvalues[i] }}</td>
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+    <div class="mb-3">
+        <ul class="list-group">
+            <li class="list-group-item">Current cash balance: {{ cash }}</li>
+            <li class="list-group-item">Grand Total: {{ totalvaluestocks }}</li>
+        </ul>
+    </div>
+{% endblock %}
