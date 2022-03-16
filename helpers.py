@@ -1,4 +1,5 @@
 import os
+import cs50
 import requests
 import urllib.parse
 
